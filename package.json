@@ -7,10 +7,8 @@
   "description": "This is a template of node project.",
   "main": "src/index.js",
   "scripts": {
-    "test": "npx jest --coverage",
-    "build": "webpack --config webpack.prod.js",
-    "start": "npx functions-framework --target=main",
-    "jsdoc": "npx documentation build -f md src/main.js | npx add-text-to-markdown README.md --section \"Usage\" --write"
+    "start": "export GOOGLE_APPLICATION_CREDENTIALS='.auth/key.json';npx functions-framework --target=main",
+    "watch": "npx npm-watch start"
   },
   "prettier": "prettier-airbnb-config",
   "repository": {
@@ -35,6 +33,7 @@
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^3.3.1",
     "jest": "^26.6.3",
+    "npm-watch": "^0.7.0",
     "prettier": "^1.18.2",
     "prettier-airbnb-config": "^1.0.0",
     "webpack": "^4.44.2",
@@ -50,5 +49,8 @@
     "cheerio": "^1.0.0-rc.5",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.22.1"
+  },
+  "watch": {
+    "start": "*.js"
   }
 }
