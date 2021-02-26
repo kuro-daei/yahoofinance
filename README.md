@@ -1,1 +1,1 @@
-# yahoofinance
+# Yahoo Finance CSV to BigQuery
